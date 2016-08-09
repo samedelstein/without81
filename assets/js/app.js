@@ -1,7 +1,7 @@
 // Empty array to hold origin and destination locations.
 var locations = [];
 
-// Route 81 LinkIDs
+// Route 81 LinkIDs (tells MapQuest API to avoid these road segments in directions).
 var LinkIDs = [15138044,15008482,15144794,15094741,15185764,15219841,14881136];
 
 // Set up alternate sets of directions.
@@ -19,7 +19,7 @@ var layer_with, layer_without;
 // Map display options.
 var options = {
       center: [ 43.0501, -76.1491 ],
-      zoom: 12,
+      zoom: 13,
       scrollWheelZoom: false
 };
 
