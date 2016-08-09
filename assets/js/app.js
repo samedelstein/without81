@@ -32,10 +32,7 @@ $(document).ready(function() {
   $('#route').click(function() {
 
     // If a route later exists, remove it before displaying a new one.
-    if(layer_with || layer_without) {
-      map_with.removeLayer(layer_with);
-      map_without.removeLayer(layer_without);
-    }
+    removeLayers(map_with, map_without);
 
     // Get the origin and destinate entered by the user.
     var origin = $('#origin').val() || $('#origin').attr('placeholder');
@@ -66,11 +63,15 @@ $(document).ready(function() {
 
   });
 
+  $('#home').click(function() {
+    removeLayers(map_with, map_without);
+  });
+
 });
 
 // Method to render the specific steps of a route.
 function renderRouteNarrative(data, id) {
- 
+
   var legs = data.route.legs, maneuvers;
   if (legs && legs.length) {
       maneuvers = legs[0].maneuvers;
@@ -91,5 +92,15 @@ function renderRouteNarrative(data, id) {
   content += '</ul>';
   }
 
-  $(id).find('#content').append(content);
+  $(id).find('.content').append(content);
+}
+
+// Method to remove route layers from map.
+function removeLayers(map_with, map_without) {
+  if(layer_with || layer_without) {
+    $('.content').empty();
+    map_with.removeLayer(layer_with);
+    map_without.removeLayer(layer_without);
+    }
+    return;
 }
