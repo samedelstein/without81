@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculate driving directions without Route 81">
+    <meta name="author" content="Mark Headd">
+    <link rel="icon" href="assets/favicon.ico">
+
+    <title>Without 81</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Without 81</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="title">
+        <h1>Getting Around Without 81</h1>
+        <p class="lead">Calculate travel directions in and around Central New York while avoiding Route 81 through Downtown Syracuse.</p>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-5">
+          <div class="input-group">
+            <span class="input-group-addon">
+              Leaving from:
+            </span>
+            <input type="text" class="form-control" id="origin" aria-label="..." placeholder="5833 Meetinghouse Road, Tully">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-5 -->
+        <div class="col-lg-5">
+          <div class="input-group">
+            <span class="input-group-addon">
+              Going to:
+            </span>
+            <input type="text" class="form-control" id="destination" aria-label="..." placeholder="231 Salina Meadows Pkwy Syracuse">
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-5 -->
+        <div class="col-lg-2">
+          <div class="input-group">
+            <button class="btn btn-primary" id="route" type="button">Get directions</button>
+          </div>
+        </div>
+      </div><!-- /.row -->
+      <div class="row" id="maps">
+        <div class="col-lg-6">
+          <h3>Typical Route</h3>
+          <div id="map-with"></div>
+          <div id="narrative-with">
+            <div id="content"></div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h3>Route Without 81</h3>
+          <div id="map-without"></div>
+          <div id="narrative-without">
+            <div id="content"></div>
+          </div>
+        </div>
+      </div><!-- /.row -->
+      
+    </div><!-- /.container -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=7k6uksN6kgVX09UkHPPkGKmAa7Hc0ZZA"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=7k6uksN6kgVX09UkHPPkGKmAa7Hc0ZZA"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

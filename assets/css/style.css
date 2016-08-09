@@ -1,0 +1,22 @@
+body {
+  padding-top: 50px;
+}
+#map2 {
+  padding: 10px;
+  margin-top: 5px;
+}
+#map-with, #map-without {
+  width: 500px;
+  height: 500px;
+}
+#narrative-with, #narrative-without {
+  margin-top: 5px;
+  padding: 5px;
+}
+.title {
+  padding: 40px 15px;
+  text-align: center;
+}
+.input-group {
+  padding: 10px;
+}
