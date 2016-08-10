@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Calculate driving directions without Route 81">
+    <meta name="author" content="Mark Headd">
+    <link rel="icon" href="assets/favicon.ico">
+
+    <title>Without 81</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css" />
+    <link rel="stylesheet" href="assets/css/style.css"/>
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand">Without 81</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li id="home"><a href="/">Home</a></li>
+            <li class="active"><a href="./about.html">About</a></li>
+            <li><a href="https://github.com/UpstateData/without81">Code</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+
+      <div class="title">
+        <h1>Getting Around Without 81</h1>
+      </div>
+
+
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        What is I-81?
+      </h3>
+      <p class="lead">
+        Interstate 81 runs from the Canadian border south to Tennesee. The highways was largely built in the 1950s and 1960s and has now reached the end of its useful life. One specific section, a 1.4 mile viaduct that cuts directly through the City of Syracuse, NY, is quickly deteriorating and does not meet current highway standards, resulting in safety concerns.
+      </p>
+<h3>
+  The problem
+</h3>
+      <p class="lead">
+        The problems surrounding I-81 leave New York State's Department of Transportation with a decision to make: what should be done with the highway? In the past several years, discussions have started about potential options - and three have risen to the top:
+        <ul>
+          <li><strong>Rebuild</strong> - With some changes to bring the highway up to current standards, the viaduct would be replaced, still cutting through the city.</li>
+          <li><strong>Boulevard</strong> - Tear down the 1.4 mile section of I-81 and replace with a street-level boulevard. To bypass the city on the highway, vehicles would be routed to I-481 which circles around the city.</li>
+          <li><strong>Dig</strong> - Create an underground highway to replace the viaduct. Though this option is still in the mix, it is widely thought to be too expensive to work.</li>
+        </ul>
+      </p>
+      <h3>The arguments</h3>
+      <p class="lead">For a good primer on the arguments, click <a href="http://www.syracuse.com/news/index.ssf/2013/05/i-81_debate_narrows_to_two_cho.html" target="_blank">here</a>.
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Proposal</th>
+        <th>For</th>
+        <th>Against</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Rebuild</td>
+        <td>Fixing the highway would allow commuters to maintain the same route as before.</td>
+        <td>The highway cuts through the city, and there are arguments that it <a href="http://www.theatlantic.com/business/archive/2015/11/syracuse-slums/416892/" target="_blank">segregates the city</a>, with negative impacts.</td>
+      </tr>
+      <tr>
+        <td>Boulevard</td>
+        <td>Eliminate the highway that splits the city in half and repurpose the land below to build businesses and make the city more walkable.</td>
+        <td>Commuters would need to find new routes into, out of, and through the city, which could result in longer travel times.</td>
+      </tr>
+      <tr>
+        <td>Dig</td>
+        <td>Gain access to the space below the existing highway while still maintaining a highway the cuts through the city.</td>
+        <td>Expensive and disrutive during construction.</td>
+      </tr>
+    </tbody>
+  </table>
+  <h3>
+    What does this tool do?
+  </h3>
+  <p class="lead">
+    This tool aims to show what the experience for drivers would look like with the two most likely outcomes for I-81: rebuilding or boulevard. Using Mapquest directions, users can find out how long their commute would be if I-81 was rebuilt versus is I-81 were torn down. There are limitations with this analysis because traffic patterns would be different if a boulevard were built. Despite any limitations, though, this tool will be useful in giving persepctive about what travel might look like in Syracuse by the end of the decade.
+  </p>
+    </div>
+  </div>
+</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=7k6uksN6kgVX09UkHPPkGKmAa7Hc0ZZA"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=7k6uksN6kgVX09UkHPPkGKmAa7Hc0ZZA"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
